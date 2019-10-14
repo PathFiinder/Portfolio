@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", event => {
 
   navBars.addEventListener("click", () => {
     header.classList.toggle("header--active");
-    console.log(header.classList.contains("header--active"));
     if (header.classList.contains("header--active") == true) {
       nav.classList.add("nav--active");
     } else if (header.classList.contains("header--active") == false) {
@@ -47,7 +46,7 @@ window.addEventListener("DOMContentLoaded", event => {
           document
             .querySelector(`[data-id='${singleTech.name}']`)
             .classList.add("mainList__item--active");
-          skillsContainerImage.src = `images/technology/${singleTech.name}.png`;
+          skillsContainerImage.src = `images/technologies/${singleTech.name}.png`;
           skillsContainerSkillsName.textContent = singleTech.name;
           skillsContainerSkillsLevel.textContent = singleTech.level;
         } else {
@@ -58,4 +57,179 @@ window.addEventListener("DOMContentLoaded", event => {
       });
     }
   });
+
+  //Projects
+
+  const projects = [
+    {
+      id: 0,
+      name: "League of Legends stats checker",
+      describe:
+        "App let user to receive information about the user's game history based on the username.",
+      urlGithub:
+        "https://github.com/PathFiinder/League-of-Legends-StatsChecker",
+      urlLive: "https://pathfiinder.github.io/League-of-Legends-StatsChecker",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+        "RioT API"
+      ],
+      category: ["app","all"]
+    },
+    {
+      id: 1,
+      name: "Interactive Map",
+      describe:
+        "App 'Interactive map' is created using jVectorMap - http://jvectormap.com/. App let the user to choose countries from all over the world which they have visited.",
+      urlGithub: "https://github.com/PathFiinder/Interactive-Map",
+      urlLive: "https://pathfiinder.github.io/Interactive-Map",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript (ES6,Classes)",
+        "jQuery",
+        "jVectorMap module"
+      ],
+      category: ["app","all"]
+    },
+    {
+      id: 2,
+      name: "Ticket Machine",
+      describe:
+        "App is an implementation of ticket machine used in public transport in Cracow. It let user to choose ticekts, add money and get the change.",
+      urlGithub: "https://github.com/PathFiinder/Ticket-Machine-Javascript",
+      urlLive: "https://pathfiinder.github.io/Ticket-Machine-Javascript",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript (ES6,Classes)",
+        "Chart.js"
+      ],
+      category: ["app","all"]
+    },
+    {
+      id: 3,
+      name: "To do List - React",
+      describe: "App is an implementation of To-do-List",
+      urlGithub: "https://github.com/PathFiinder/To-Do-List-React",
+      urlLive: "https://pathfiinder.github.io/To-Do-List-React/",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "React"],
+      category: ["app","all"]
+    },
+    {
+      id: 4,
+      name: "MoGo",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/MoGo-PSD-to-HTML",
+      urlLive: "https://pathfiinder.github.io/MoGo-PSD-to-HTML",
+      techUsed: [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+        "Bootstrap 4",
+        "jQuery"
+      ],
+      category: ["web","all"]
+    },
+    {
+      id: 5,
+      name: "Ceatr",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Ceatr-5-PSD-to-HTML",
+      urlLive: "https://pathfiinder.github.io/Ceatr-5-PSD-to-HTML",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
+      category: ["web","all"]
+    },
+    {
+      id: 6,
+      name: "Smiley",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Smiley-3-PSD-to-HTML",
+      urlLive: "https://pathfiinder.github.io/Smiley-3-PSD-to-HTML",
+      techUsed: ["HTML5", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
+      category: ["web","all"]
+    },
+    {
+      id: 7,
+      name: "Agency",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Agency-4-PSD-to-HTML",
+      urlLive: "https://pathfiinder.github.io/Agency-4-PSD-to-HTML",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript"],
+      category: ["web","all"]
+    },
+    {
+      id: 8,
+      name: "Cahee",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Cahee-2-PSD-to-HTML",
+      urlLive: "https://pathfiinder.github.io/Cahee-2-PSD-to-HTML/",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
+      category: ["web","all"]
+    },
+    {
+      id: 9,
+      name: "Memory Game",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Memory-Game",
+      urlLive: "https://pathfiinder.github.io/Memory-Game",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript"],
+      category: ["app","all"]
+    },
+    {
+      id: 10,
+      name: "Paper-Rock-Scissors",
+      describe:
+        "A project carried out to create a website using free template (PSD to HTML)",
+      urlGithub: "https://github.com/PathFiinder/Game-Paper-Rock-Scissors",
+      urlLive: "https://pathfiinder.github.io/Game-Paper-Rock-Scissors",
+      techUsed: ["HTML5","CSS3", "SASS", "RWD", "JavaScript"],
+      category: ["app","all"]
+    }
+  ];
+  const typeOfSort = "all"
+  
+  const createElement = (name,describe) => {
+    const element = `
+      <h3 class="workSingleProject__name">${name}</h3>
+      <hr class="workSingleProject__hr"/>
+      <p class="workSingleProject__describe">${describe}</p>
+      <div class="workSingleProject__techContainer">
+      </div>
+    `
+
+    return element;
+  ;}
+
+
+  const projectsContainer = document.querySelector('.projects__workContainer'); 
+
+  projects.filter((singleProject) => {
+    if(singleProject.category[1] === typeOfSort){
+       const div = document.createElement('div');
+       div.classList.add("workContainer__element", "workSingleProject");
+       div.innerHTML += createElement(singleProject.name,singleProject.describe);
+       projectsContainer.appendChild(div);
+    }
+  })
+
+
 });

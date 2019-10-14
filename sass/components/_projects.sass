@@ -1,2 +1,51 @@
 .projects
-    
+    margin-top: 50px
+    padding-left: 15px
+    position: relative
+    @include mediaQ(411px)
+        padding-left: 30px
+    @include mediaQ(568px)
+        padding-left: 45px
+    @include mediaQ(768px)
+        padding-left: 60px
+    @include mediaQ(1024px)
+        padding-left: 80px
+    @include mediaQ(1280px)
+        padding-left: 100px
+    &__title
+        font-size: $mainSectionsTitleFS
+        font-weight: bold
+        letter-spacing: 2px
+        position: relative
+        margin-bottom: 30px
+        @include mediaQ(1024px)
+            font-size: 70px
+        &::before
+            content: ""
+            position: absolute
+            bottom: 50px
+            left: 0
+            height: 2px
+            width: 80px
+            background-color: black
+            @include mediaQ(500px)
+                bottom: -5px
+            @include mediaQ(1024px)    
+                width: 100px
+    &__sortContainer
+        display: flex
+        flex-direction: row
+        max-height: 30px 
+        max-width: 300px 
+        .projects__sortSingleType
+            flex-basis: 33.33%
+            text-align: center
+            font-size: 16px
+            &--active
+                color: rgba(grey,0.8)
+                letter-spacing: 0.5px
+    &__hr
+        width: 90%
+        margin: 10px 0
+    &__workContainer
+        margin-top: 30px

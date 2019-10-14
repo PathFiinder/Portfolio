@@ -376,9 +376,9 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 1px;
+  height: 2px;
   width: 70px;
-  background-color: white;
+  background-color: black;
 }
 
 @media (min-width: 731px) {
@@ -884,5 +884,110 @@ main {
     -ms-flex-preferred-size: calc(50% - 20px);
         flex-basis: calc(50% - 20px);
   }
+}
+
+.projects {
+  margin-top: 50px;
+  padding-left: 15px;
+  position: relative;
+}
+
+@media (min-width: 411px) {
+  .projects {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 568px) {
+  .projects {
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    padding-left: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .projects {
+    padding-left: 100px;
+  }
+}
+
+.projects__title {
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .projects__title {
+    font-size: 70px;
+  }
+}
+
+.projects__title::before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  height: 2px;
+  width: 80px;
+  background-color: black;
+}
+
+@media (min-width: 500px) {
+  .projects__title::before {
+    bottom: -5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects__title::before {
+    width: 100px;
+  }
+}
+
+.projects__sortContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-height: 30px;
+  max-width: 300px;
+}
+
+.projects__sortContainer .projects__sortSingleType {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.projects__sortContainer .projects__sortSingleType--active {
+  color: rgba(128, 128, 128, 0.8);
+  letter-spacing: 0.5px;
+}
+
+.projects__hr {
+  width: 90%;
+  margin: 10px 0;
+}
+
+.projects__workContainer {
+  margin-top: 30px;
 }
 /*# sourceMappingURL=main.css.map */

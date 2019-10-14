@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", event => {
           document
             .querySelector(`[data-id='${singleTech.name}']`)
             .classList.add("mainList__item--active");
-          skillsContainerImage.src = `images/technologies/${singleTech.name}.png`;
+          skillsContainerImage.src = `images/technology/${singleTech.name}.png`;
           skillsContainerSkillsName.textContent = singleTech.name;
           skillsContainerSkillsLevel.textContent = singleTech.level;
         } else {

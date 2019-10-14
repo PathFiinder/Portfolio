@@ -674,7 +674,12 @@ main {
   font-weight: bold;
   letter-spacing: 2px;
   position: relative;
-  font-size: 70px;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__title {
+    font-size: 70px;
+  }
 }
 
 .aboutMe__title::before {

@@ -1,0 +1,97 @@
+.header
+    height: 80px
+    border: 2px solid white
+    background-color: #252527
+    position: relative
+    text-align: center
+    @include mediaQ(731px)
+        height: 150px
+    &--active
+        height: 260px
+    &__logo
+        position: absolute
+        top: 10px
+        left: 10px
+        @include mediaQ(731px)
+            top: 15px
+        &Img
+            height: 60px
+            width: 100px
+            @include mediaQ(731px)
+                height: 120px
+                width: 200px
+            @include mediaQ(1280px)
+                width: 280px
+    &__icon
+        position: absolute
+        top: 20px
+        right: 20px
+        color: white
+        height: 40px
+        @include mediaQ(731px)
+            display: none
+        &Bars
+            font-size: 40px  
+    &__nav.nav
+        position: absolute
+        top: 80px
+        right: 0
+        width: 100%
+        height: calc(260px - 80px - 10px)
+        &--none
+            display: none
+            @include mediaQ(731px)
+                display: block
+                top: 50%
+                right: 0
+                height: 50px
+                transform: translateY(-50%)
+                width: 520px
+            @include mediaQ(1024px)
+                right: 50px
+                width: 550px
+            @include mediaQ(1280px)
+                right: 100px
+                width: 600px
+        &--active
+            display: block
+        .nav__list
+            height: 100%
+            display: flex
+            flex-direction: column
+            @include mediaQ(731px)
+                flex-direction: row
+                width: 100%
+            .nav__item
+                flex-basis: 25%
+                list-style: none
+                position: relative
+                &:hover::before
+                    content: ""
+                    position: absolute
+                    bottom: 7px
+                    left: 50%
+                    transform: translateX(-50%)
+                    height: 1px
+                    width: 70px
+                    background-color: white
+                    @include mediaQ(731px)
+                        width: 100px
+                    @include mediaQ(1280px)
+                        width: 130px
+                .nav__link
+                    text-decoration: none
+                    color: white
+                    text-transform: uppercase
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    width: 100%
+                    transform: translate(-50%,-50%)
+                    @include mediaQ(731px)
+                        font-size: 18px
+                    @include mediaQ(1024px)
+                        font-size: 22px
+                    @include mediaQ(1280px)
+                        font-size: 26px
+           

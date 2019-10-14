@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio - Krystian Konecki</title>
+    <title>Krystian Konecki - Junior Front-end Developer</title>
     <meta name="author" content="Krystian Konecki" />
     <script
       src="https://kit.fontawesome.com/56327ab928.js"
@@ -14,12 +14,40 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="showcase">
-        <i class="fas fa-signal"></i>
-      </section>
-      <section class="about_me"></section>
-      <section class="projects"></section>
-      <section class="contact"></section>
+      <header class="header">
+        <h1 class="header__logo">
+          <img
+            src="images/Logo.png"
+            alt="Main logo of website"
+            class="header__logoImg"
+          />
+        </h1>
+        <span class="header__icon"
+          ><i class="fas fa-bars header__iconBars"></i
+        ></span>
+        <nav class="header__nav nav nav--none">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--top">top</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link  nav__link--aboutMe">about me</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--projects">projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--contact">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="main__showcase showcase"></section>
+        <section class="main__aboutMe aboutMe"></section>
+        <section class="main__projects projects"></section>
+        <section class="main__contact contact"></section>
+      </main>
       <footer class="footer"></footer>
     </div>
     <script src="js/main.js"></script>

@@ -2,10 +2,12 @@
     height: 80px
     border: 2px solid white
     background-color: #252527
-    position: relative
+    position: fixed
     text-align: center
+    width: calc(100% - 4px)
+    z-index: 9999
     @include mediaQ(731px)
-        height: 150px
+        height: 130px
     &--active
         height: 260px
     &__logo
@@ -13,7 +15,7 @@
         top: 10px
         left: 10px
         @include mediaQ(731px)
-            top: 15px
+            top: 5px
         &Img
             height: 60px
             width: 100px

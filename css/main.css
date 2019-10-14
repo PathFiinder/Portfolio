@@ -227,7 +227,7 @@ body {
 
 .wrapper {
   min-width: 280px;
-  min-height: 400vh;
+  min-height: 100vh;
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
 }
@@ -639,11 +639,42 @@ main {
   position: relative;
 }
 
+@media (min-width: 411px) {
+  .aboutMe {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 568px) {
+  .aboutMe {
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .aboutMe {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutMe {
+    padding-left: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aboutMe {
+    padding-left: 100px;
+  }
+}
+
 .aboutMe__title {
   font-size: 55px;
   font-weight: bold;
   letter-spacing: 2px;
   position: relative;
+  font-size: 70px;
 }
 
 .aboutMe__title::before {
@@ -660,6 +691,13 @@ main {
   margin-top: 30px;
   width: 90%;
   line-height: 22px;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__describe {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .aboutMe__techContainer {
@@ -680,7 +718,15 @@ main {
   letter-spacing: 0.5px;
 }
 
-.aboutMe__techContainer .aboutMe__list.mainList {
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__subTech--other {
+    position: absolute;
+    top: 25px;
+    left: 500px;
+  }
+}
+
+.aboutMe__techContainer .aboutMe__list, .aboutMe__techContainer .mainList {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -692,13 +738,14 @@ main {
   max-width: 140px;
 }
 
-.aboutMe__techContainer .aboutMe__list.mainList .mainList__item {
+.aboutMe__techContainer .aboutMe__list .aboutMe__listItem, .aboutMe__techContainer .aboutMe__list .mainList__item, .aboutMe__techContainer .mainList .aboutMe__listItem, .aboutMe__techContainer .mainList .mainList__item {
   list-style: none;
   padding: 5px 5px 5px 0;
   font-size: 18px;
+  padding: 10px 10px 10px 0;
 }
 
-.aboutMe__techContainer .aboutMe__list.mainList .mainList__item--active {
+.aboutMe__techContainer .aboutMe__list .aboutMe__listItem--active, .aboutMe__techContainer .aboutMe__list .mainList__item--active, .aboutMe__techContainer .mainList .aboutMe__listItem--active, .aboutMe__techContainer .mainList .mainList__item--active {
   letter-spacing: 4px;
   color: rgba(128, 128, 128, 0.7);
   -webkit-transition: letter-spacing 0.3s;
@@ -708,10 +755,24 @@ main {
 .aboutMe__techContainer .aboutMe__skillsContainer {
   position: absolute;
   top: 150px;
-  right: 20px;
+  left: 130px;
   height: 110px;
   width: 150px;
   border: 1px solid black;
+}
+
+@media (min-width: 568px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer {
+    left: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer {
+    right: 100px;
+    height: 150px;
+    width: 180px;
+  }
 }
 
 .aboutMe__techContainer .aboutMe__skillsContainer::before {
@@ -724,6 +785,13 @@ main {
   border: 1px solid black;
 }
 
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer::before {
+    height: 150px;
+    width: 180px;
+  }
+}
+
 .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsTechImage {
   position: absolute;
   top: -30px;
@@ -734,12 +802,26 @@ main {
   width: 60px;
 }
 
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsTechImage {
+    height: 80px;
+    width: 80px;
+    top: -40px;
+  }
+}
+
 .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsName {
   font-size: 16px;
   position: absolute;
   left: 10px;
   top: 60px;
   font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsName {
+    font-size: 18px;
+  }
 }
 
 .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel {
@@ -749,8 +831,53 @@ main {
   top: 80px;
 }
 
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel {
+    top: 90px;
+    font-size: 16px;
+  }
+}
+
 .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel--bold {
   font-weight: bold;
   font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel--bold {
+    font-size: 18px;
+  }
+}
+
+.aboutMe__techContainer .otherList {
+  max-width: 300px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .otherList {
+    position: absolute;
+    top: 60px;
+    left: 500px;
+    max-width: 400px;
+  }
+}
+
+.aboutMe__techContainer .otherList .otherList__element {
+  -ms-flex-preferred-size: calc(50% - 10px);
+      flex-basis: calc(50% - 10px);
+}
+
+@media (min-width: 1024px) {
+  .aboutMe__techContainer .otherList .otherList__element {
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

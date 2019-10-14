@@ -1,11 +1,23 @@
 .aboutMe
     padding-left: 15px
     position: relative
+    @include mediaQ(411px)
+        padding-left: 30px
+    @include mediaQ(568px)
+        padding-left: 45px
+    @include mediaQ(768px)
+        padding-left: 60px
+    @include mediaQ(1024px)
+        padding-left: 80px
+    @include mediaQ(1280px)
+        padding-left: 100px
     &__title
         font-size: $mainSectionsTitleFS
         font-weight: bold
         letter-spacing: 2px
         position: relative
+        @include mediaQ(1024px)
+        font-size: 70px
         &::before
             content: ""
             position: absolute
@@ -18,6 +30,9 @@
         margin-top: 30px
         width: 90%
         line-height: 22px
+        @include mediaQ(1024px)
+            font-size: 24px
+            line-height: 30px
     &__techContainer
         position: relative
         .aboutMe__tech
@@ -30,15 +45,22 @@
             text-decoration: underline
             font-size: 18px
             letter-spacing: 0.5px
-        .aboutMe__list.mainList
+            &--other
+                @include mediaQ(1024px)
+                    position: absolute
+                    top: 25px
+                    left: 500px
+        .aboutMe__list, .mainList
             margin-top: 10px
             display: flex
             flex-direction: column
             max-width: 140px
-            .mainList__item
+            .aboutMe__listItem, .mainList__item
                 list-style: none
                 padding: 5px 5px 5px 0
                 font-size: 18px
+                @include mediaQ(1024px)
+                padding: 10px 10px 10px 0
                 &--active
                     letter-spacing: 4px
                     color: rgba(grey,0.7)
@@ -46,10 +68,16 @@
         .aboutMe__skillsContainer
             position: absolute
             top: 150px
-            right: 20px
+            left: 130px
             height: 110px
             width: 150px
             border: 1px solid black
+            @include mediaQ(568px)
+                left: 200px
+            @include mediaQ(1024px)
+                right: 100px
+                height: 150px
+                width: 180px
             &::before
                 content: ''
                 position: absolute
@@ -58,6 +86,9 @@
                 height: 110px
                 width: 150px
                 border: 1px solid black
+                @include mediaQ(1024px)
+                    height: 150px
+                    width: 180px
             .aboutMe__skillsTechImage
                 position: absolute
                 top: -30px
@@ -65,17 +96,43 @@
                 transform: translateX(-50%)
                 height: 60px
                 width: 60px
+                @include mediaQ(1024px)
+                    height: 80px
+                    width: 80px
+                    top: -40px
             .aboutMe__skillsName
                 font-size: 16px
                 position: absolute
                 left: 10px
                 top: 60px
                 font-weight: bold
+                @include mediaQ(1024px)
+                    font-size: 18px
             .aboutMe__skillsLevel
                 font-size: 14.5px
                 position: absolute
                 left: 10px
                 top: 80px
+                @include mediaQ(1024px)
+                    top: 90px
+                    font-size: 16px
                 &--bold
                     font-weight: bold
                     font-size: 16px
+                    @include mediaQ(1024px)
+                        font-size: 18px
+        .otherList
+            max-width: 300px
+            flex-direction: row
+            flex-wrap: wrap
+            position: relative
+            @include mediaQ(1024px)
+                position: absolute
+                top: 60px
+                left: 500px
+                max-width: 400px
+            .otherList__element
+                flex-basis: calc(50% - 10px)
+                @include mediaQ(1024px)
+                    flex-basis: calc(50% - 20px)
+                

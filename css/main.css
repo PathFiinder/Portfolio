@@ -222,21 +222,19 @@ textarea {
 }
 
 body {
-  background-color: #F1C40F;
+  background-color: white;
 }
 
 .wrapper {
   min-width: 280px;
-  min-height: 100vh;
+  min-height: 400vh;
   margin: 0 auto;
-  background-color: #F1C40F;
   font-family: 'Roboto Slab', serif;
 }
 
 .header {
   height: 80px;
-  border: 2px solid white;
-  background-color: #252527;
+  background-color: white;
   position: fixed;
   text-align: center;
   width: calc(100% - 4px);
@@ -287,7 +285,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: white;
+  color: black;
   height: 40px;
 }
 
@@ -397,7 +395,7 @@ body {
 
 .header__nav.nav .nav__list .nav__item .nav__link {
   text-decoration: none;
-  color: white;
+  color: black;
   text-transform: uppercase;
   position: absolute;
   top: 50%;
@@ -459,7 +457,7 @@ main {
   height: 100px;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 100px;
+  padding-top: 70px;
   margin-left: 15px;
   line-height: 35px;
 }
@@ -498,9 +496,9 @@ main {
   .showcase__title {
     padding-top: 120px;
     margin-left: 100px;
-    font-size: 50px;
-    width: 600px;
-    line-height: 60px;
+    font-size: 70px;
+    width: 900px;
+    line-height: 80px;
   }
 }
 
@@ -509,8 +507,8 @@ main {
   width: 100px;
   padding: 4px;
   margin-right: 10px;
-  border: 2px solid black;
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 
 .showcase__describe {
@@ -556,7 +554,7 @@ main {
     margin-left: 100px;
     font-size: 32px;
     width: 700px;
-    margin-top: 50px;
+    margin-top: 80px;
     line-height: 30px;
   }
 }
@@ -634,5 +632,125 @@ main {
 .showcase__list .showcase__item .showcase__link {
   height: 100%;
   width: 100%;
+}
+
+.aboutMe {
+  padding-left: 15px;
+  position: relative;
+}
+
+.aboutMe__title {
+  font-size: 55px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.aboutMe__title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100px;
+  background-color: black;
+}
+
+.aboutMe__describe {
+  margin-top: 30px;
+  width: 90%;
+  line-height: 22px;
+}
+
+.aboutMe__techContainer {
+  position: relative;
+}
+
+.aboutMe__techContainer .aboutMe__tech {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.aboutMe__techContainer .aboutMe__subTech {
+  margin-top: 18px;
+  text-decoration: underline;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.aboutMe__techContainer .aboutMe__list.mainList {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 140px;
+}
+
+.aboutMe__techContainer .aboutMe__list.mainList .mainList__item {
+  list-style: none;
+  padding: 5px 5px 5px 0;
+  font-size: 18px;
+}
+
+.aboutMe__techContainer .aboutMe__list.mainList .mainList__item--active {
+  letter-spacing: 4px;
+  color: rgba(128, 128, 128, 0.7);
+  -webkit-transition: letter-spacing 0.3s;
+  transition: letter-spacing 0.3s;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  height: 110px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 110px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsTechImage {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 60px;
+  width: 60px;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsName {
+  font-size: 16px;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+  font-weight: bold;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel {
+  font-size: 14.5px;
+  position: absolute;
+  left: 10px;
+  top: 80px;
+}
+
+.aboutMe__techContainer .aboutMe__skillsContainer .aboutMe__skillsLevel--bold {
+  font-weight: bold;
+  font-size: 16px;
 }
 /*# sourceMappingURL=main.css.map */

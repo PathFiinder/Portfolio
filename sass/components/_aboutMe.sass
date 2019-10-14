@@ -1,2 +1,81 @@
 .aboutMe
-    
+    padding-left: 15px
+    position: relative
+    &__title
+        font-size: $mainSectionsTitleFS
+        font-weight: bold
+        letter-spacing: 2px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            bottom: -5px
+            left: 0
+            height: 2px
+            width: 100px
+            background-color: black
+    &__describe
+        margin-top: 30px
+        width: 90%
+        line-height: 22px
+    &__techContainer
+        position: relative
+        .aboutMe__tech
+            margin-top: 20px
+            font-weight: bold
+            font-size: 22px
+            letter-spacing: 1px
+        .aboutMe__subTech
+            margin-top: 18px
+            text-decoration: underline
+            font-size: 18px
+            letter-spacing: 0.5px
+        .aboutMe__list.mainList
+            margin-top: 10px
+            display: flex
+            flex-direction: column
+            max-width: 140px
+            .mainList__item
+                list-style: none
+                padding: 5px 5px 5px 0
+                font-size: 18px
+                &--active
+                    letter-spacing: 4px
+                    color: rgba(grey,0.7)
+                    transition: letter-spacing 0.3s
+        .aboutMe__skillsContainer
+            position: absolute
+            top: 150px
+            right: 20px
+            height: 110px
+            width: 150px
+            border: 1px solid black
+            &::before
+                content: ''
+                position: absolute
+                top: 5px
+                left: 5px
+                height: 110px
+                width: 150px
+                border: 1px solid black
+            .aboutMe__skillsTechImage
+                position: absolute
+                top: -30px
+                left: 50%
+                transform: translateX(-50%)
+                height: 60px
+                width: 60px
+            .aboutMe__skillsName
+                font-size: 16px
+                position: absolute
+                left: 10px
+                top: 60px
+                font-weight: bold
+            .aboutMe__skillsLevel
+                font-size: 14.5px
+                position: absolute
+                left: 10px
+                top: 80px
+                &--bold
+                    font-weight: bold
+                    font-size: 16px

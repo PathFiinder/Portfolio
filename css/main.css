@@ -728,7 +728,7 @@ main {
 }
 
 .aside__title--grey {
-  color: rgba(128, 128, 128, 0.7);
+  color: rgba(128, 128, 128, 0.9);
 }
 
 @-webkit-keyframes asideShow {

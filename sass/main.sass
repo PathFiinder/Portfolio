@@ -4,12 +4,22 @@
 
 body
     background-color: white
+    animation: loader 3s
+
+
+@keyframes loader 
+    from 
+        opacity: 0
+    to
+        opacity: 1
+            
 
 .wrapper 
     min-width: 280px
     min-height: 100vh
     margin: 0 auto
     font-family: 'Roboto Slab', serif
+    overflow: hidden
     
     
 @import "components/_header.sass"
@@ -18,11 +28,13 @@ main
     padding-top: 84px
     max-width: 1280px
     margin: 0 auto
+    position: relative
     @include mediaQ(731px)
         padding-top: 154px
 
 
 @import "components/_showcase.sass"
+@import "components/_aside.sass"
 @import "components/_aboutMe.sass"
 @import "components/_projects.sass"
 @import "components/_contact.sass"

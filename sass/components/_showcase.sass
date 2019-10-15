@@ -5,6 +5,7 @@
     @include mediaQ(1024px)
         height: calc(100vh - 130px)
     position: relative
+    animation: showcaseShow 2s 
     &__title
         width: 300px
         height: 100px
@@ -64,7 +65,7 @@
             font-size: 32px
             width: 700px
             margin-top: 80px
-            line-height: 30px
+            line-height: 35px
     &__list
         overflow: hidden
         height: 80px
@@ -101,3 +102,11 @@
             .showcase__link
                 height: 100%
                 width: 100%
+
+@keyframes showcaseShow
+    from
+        opacity: 0
+        bottom: -100px
+    to
+        opacity: 1
+        bottom: 0px

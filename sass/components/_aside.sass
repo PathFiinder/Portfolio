@@ -1,0 +1,22 @@
+.aside
+    position: absolute
+    top: 450px
+    right: -350px
+    display: none
+    animation: asideShow 2s
+    @include mediaQ(1280px)
+        display: block
+    &__title
+        transform: rotate(-90deg)
+        font-size: 180px
+        font-weight: bold
+        &--grey
+            color: rgba(grey,0.7)
+
+@keyframes asideShow
+    from
+        right: -600px
+        opacity: 0
+    to
+        right: -350px
+        opacity: 1

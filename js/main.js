@@ -312,7 +312,11 @@ window.addEventListener("DOMContentLoaded", event => {
   let contactPosTop = $(".contact").offset().top;
 
   $(".nav__link--top").on("click", function() {
-    toScroll(showcasePosTop, headerHeight);
+    toScroll(showcasePosTop, headerHeight + 130);
+  });
+
+  $(".header__link").on("click", function() {
+    toScroll(showcasePosTop, headerHeight + 130);
   });
 
   $(".nav__link--aboutMe").on("click", function() {

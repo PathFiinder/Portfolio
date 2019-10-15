@@ -5,6 +5,7 @@
     text-align: center
     width: calc(100% - 4px)
     z-index: 9999
+    animation: showHeader 1.5s
     @include mediaQ(731px)
         height: 130px
     &--active
@@ -97,4 +98,11 @@
                         font-size: 22px
                     @include mediaQ(1280px)
                         font-size: 26px
-           
+
+@keyframes showHeader
+    from
+        top: -100px
+        opacity: 0
+    to
+        top: 0px
+        opacity: 1

@@ -26,9 +26,9 @@
             class="header__logoImg"
           />
         </h1>
-        <span class="header__icon"
-          ><i class="fas fa-bars header__iconBars"></i
-        ></span>
+        <button class="header__buttonIcon"
+          ><i class="fas fa-bars header__buttonIcon--bars"></i
+        ></button>
         <nav class="header__nav nav nav--none">
           <ul class="nav__list">
             <li class="nav__item">
@@ -162,17 +162,19 @@
         <section class="main__projects projects">
           <h2 class="projects__title">Selected projects.</h2>
           <ul class="projects__sortContainer">
-            <li class="projects__sortSingleType projects__sortSingleType--active" data-sortType="all">
+            <li
+              class="projects__sortSingleType projects__sortSingleType--active"
+              data-sortType="all"
+            >
               All projects
             </li>
-            <li class="projects__sortSingleType" data-sortType="webs">
+            <li class="projects__sortSingleType" data-sortType="web">
               Websites
             </li>
-            <li class="projects__sortSingleType" data-sortType="apps">Apps</li>
+            <li class="projects__sortSingleType" data-sortType="app">Apps</li>
           </ul>
           <hr class="projects__hr" />
-          <div class="projects__workContainer workContainer">
-          </div>
+          <div class="projects__workContainer workContainer"></div>
         </section>
         <section class="main__contact contact"></section>
       </main>

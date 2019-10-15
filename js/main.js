@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", event => {
   //Handle navigation bars
-  const navBars = document.querySelector(".header__iconBars");
+  const navBars = document.querySelector(".header__buttonIcon--bars");
   const nav = document.querySelector(".header__nav");
   const header = document.querySelector(".header");
 
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", event => {
   const technologiesName = [
     { name: "HTML5", level: "Intermediate" },
     { name: "CSS3", level: "Advanced" },
-    { name: "JavaScript", level: "Advanced" },
+    { name: "JavaScript", level: "Intermediate" },
     { name: "React", level: "Beginner" },
     { name: "jQuery", level: "Intermediate" },
     { name: "RWD", level: "Intermediate" },
@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", event => {
         "JavaScript",
         "RioT API"
       ],
-      category: ["app","all"]
+      category: ["app", "all"]
     },
     {
       id: 1,
@@ -93,11 +93,11 @@ window.addEventListener("DOMContentLoaded", event => {
         "CSS3",
         "SASS",
         "RWD",
-        "JavaScript (ES6,Classes)",
+        "JavaScript",
         "jQuery",
-        "jVectorMap module"
+        "jVectorMap"
       ],
-      category: ["app","all"]
+      category: ["app", "all"]
     },
     {
       id: 2,
@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", event => {
         "JavaScript (ES6,Classes)",
         "Chart.js"
       ],
-      category: ["app","all"]
+      category: ["app", "all"]
     },
     {
       id: 3,
@@ -124,7 +124,7 @@ window.addEventListener("DOMContentLoaded", event => {
       urlGithub: "https://github.com/PathFiinder/To-Do-List-React",
       urlLive: "https://pathfiinder.github.io/To-Do-List-React/",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "React"],
-      category: ["app","all"]
+      category: ["app", "all"]
     },
     {
       id: 4,
@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", event => {
         "Bootstrap 4",
         "jQuery"
       ],
-      category: ["web","all"]
+      category: ["web", "all"]
     },
     {
       id: 5,
@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", event => {
       urlGithub: "https://github.com/PathFiinder/Ceatr-5-PSD-to-HTML",
       urlLive: "https://pathfiinder.github.io/Ceatr-5-PSD-to-HTML",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
-      category: ["web","all"]
+      category: ["web", "all"]
     },
     {
       id: 6,
@@ -162,7 +162,7 @@ window.addEventListener("DOMContentLoaded", event => {
       urlGithub: "https://github.com/PathFiinder/Smiley-3-PSD-to-HTML",
       urlLive: "https://pathfiinder.github.io/Smiley-3-PSD-to-HTML",
       techUsed: ["HTML5", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
-      category: ["web","all"]
+      category: ["web", "all"]
     },
     {
       id: 7,
@@ -172,7 +172,7 @@ window.addEventListener("DOMContentLoaded", event => {
       urlGithub: "https://github.com/PathFiinder/Agency-4-PSD-to-HTML",
       urlLive: "https://pathfiinder.github.io/Agency-4-PSD-to-HTML",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript"],
-      category: ["web","all"]
+      category: ["web", "all"]
     },
     {
       id: 8,
@@ -182,54 +182,106 @@ window.addEventListener("DOMContentLoaded", event => {
       urlGithub: "https://github.com/PathFiinder/Cahee-2-PSD-to-HTML",
       urlLive: "https://pathfiinder.github.io/Cahee-2-PSD-to-HTML/",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
-      category: ["web","all"]
+      category: ["web", "all"]
     },
     {
       id: 9,
       name: "Memory Game",
-      describe:
-        "A project carried out to create a website using free template (PSD to HTML)",
+      describe: "In game 'Memory Game' user have to find two same cards",
       urlGithub: "https://github.com/PathFiinder/Memory-Game",
       urlLive: "https://pathfiinder.github.io/Memory-Game",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript"],
-      category: ["app","all"]
+      category: ["app", "all"]
     },
     {
       id: 10,
       name: "Paper-Rock-Scissors",
       describe:
-        "A project carried out to create a website using free template (PSD to HTML)",
+        "Game 'Paper-Rock-Scissors' let user to choose one of three  option and play with computer",
       urlGithub: "https://github.com/PathFiinder/Game-Paper-Rock-Scissors",
       urlLive: "https://pathfiinder.github.io/Game-Paper-Rock-Scissors",
-      techUsed: ["HTML5","CSS3", "SASS", "RWD", "JavaScript"],
-      category: ["app","all"]
+      techUsed: ["HTML5", "CSS3", "SASS", "RWD", "JavaScript"],
+      category: ["app", "all"]
     }
   ];
-  const typeOfSort = "all"
-  
-  const createElement = (name,describe) => {
+  let typeOfSort = "all";
+
+  const createSingleTech = techUsed => {
+    let innerHTML = "";
+    techUsed.forEach(singleTech => {
+      innerHTML += `<li class="workSingleProject__techItem">${singleTech}</li>`;
+    });
+    return innerHTML;
+  };
+
+  const createElement = (
+    name,
+    describe,
+    techUsed,
+    urlGit,
+    urlLive
+  ) => {
     const element = `
       <h3 class="workSingleProject__name">${name}</h3>
       <hr class="workSingleProject__hr"/>
       <p class="workSingleProject__describe">${describe}</p>
-      <div class="workSingleProject__techContainer">
+      <ul class="workSingleProject__techList">
+          ${createSingleTech(techUsed)}
+      </ul>
+      <div class="workSingleProject__linkList">
+        <a class="workSingleProject__linkItem" href="${urlGit}"><span class="fab fa-github-square workSingleProject__linkIcon"></span></a>
+        <a class="workSingleProject__linkItem" href="${urlLive}"><span class="fas fa-eye workSingleProject__linkIcon"></span></a>
       </div>
-    `
+      `;
 
     return element;
-  ;}
+  };
 
+  const projectsContainer = document.querySelector(".projects__workContainer");
 
-  const projectsContainer = document.querySelector('.projects__workContainer'); 
+  const filterProjects = () => {
+    projects.filter(singleProject => {
+      if (
+        singleProject.category[1] === typeOfSort ||
+        singleProject.category[0] === typeOfSort
+      ) {
+        const div = document.createElement("div");
+        div.classList.add("workContainer__element", "workSingleProject");
+        div.dataset.id = singleProject.id;
+        div.innerHTML += createElement(
+          singleProject.name,
+          singleProject.describe,
+          singleProject.techUsed,
+          singleProject.urlGithub,
+          singleProject.urlLive
+        );
+        projectsContainer.appendChild(div);
+      }
+    });
+  };
+  filterProjects();
 
-  projects.filter((singleProject) => {
-    if(singleProject.category[1] === typeOfSort){
-       const div = document.createElement('div');
-       div.classList.add("workContainer__element", "workSingleProject");
-       div.innerHTML += createElement(singleProject.name,singleProject.describe);
-       projectsContainer.appendChild(div);
-    }
-  })
+  const buttonsTypeOfSort = document.querySelectorAll(
+    ".projects__sortSingleType"
+  );
 
+  const removeActiveSortType = () => {
+    [...buttonsTypeOfSort].forEach(single => {
+      single.classList.remove("projects__sortSingleType--active");
+    });
+  };
 
+  [...buttonsTypeOfSort].forEach(singleButton => {
+    singleButton.addEventListener("click", event => {
+      typeOfSort = event.target.dataset.sorttype;
+      removeActiveSortType();
+      while (projectsContainer.firstChild) {
+        projectsContainer.removeChild(projectsContainer.firstChild);
+      }
+      document
+        .querySelector(`[data-sortType='${typeOfSort}']`)
+        .classList.add("projects__sortSingleType--active");
+      filterProjects();
+    });
+  });
 });

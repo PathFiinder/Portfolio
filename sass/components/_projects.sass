@@ -48,4 +48,62 @@
         width: 90%
         margin: 10px 0
     &__workContainer
-        margin-top: 30px
+        margin: 30px 0px
+        width: 95%
+        display: flex
+        flex-direction: column
+        .workContainer__element,.workSingleProject
+            padding: 5px
+            height: 230px
+            @include mediaQ(568px)
+                height: 200px
+            @include mediaQ(768px)
+                height: 180px
+            margin: 5px
+            border: 1px solid black
+            overflow: hidden
+            position: relative
+            .workSingleProject__name
+                font-size: 16px
+                font-weight: bold
+                @include mediaQ(768px)
+                    font-size: 20px
+            .workSingleProject__describe
+                font-size: 14px
+                margin-bottom: 10px
+                @include mediaQ(360px)
+                    margin: 20px 0px
+                @include mediaQ(768px)
+                    font-size: 16px
+            .workSingleProject__techList
+                display: flex
+                flex-direction: column
+                height: 80px
+                flex-wrap: wrap
+                width: 95%
+                @include mediaQ(568px)
+                    height: 60px
+                    flex-direction: row
+                @include mediaQ(768px)
+                    height: 30px
+                    margin-top: 20px
+                .workSingleProject__techItem
+                    width: 50%
+                    @include mediaQ(568px)
+                        width: auto
+                        min-width: 60px
+                    margin: 2px
+                    font-size: 14px
+                    font-weight: bold
+            .workSingleProject__linkList
+                width: 100px
+                height: 30px
+                display: flex
+                flex-direction: row
+                .workSingleProject__linkItem
+                    flex-basis: 50%
+                    text-align: center
+                    line-height: 30px
+                    .workSingleProject__linkIcon
+                        color: black
+                        font-size: 30px

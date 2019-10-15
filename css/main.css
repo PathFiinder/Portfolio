@@ -281,21 +281,23 @@ body {
   }
 }
 
-.header__icon {
+.header__buttonIcon {
   position: absolute;
   top: 20px;
   right: 20px;
   color: black;
   height: 40px;
+  border: none;
+  background-color: transparent;
 }
 
 @media (min-width: 731px) {
-  .header__icon {
+  .header__buttonIcon {
     display: none;
   }
 }
 
-.header__iconBars {
+.header__buttonIcon--bars {
   font-size: 40px;
 }
 
@@ -453,9 +455,9 @@ main {
 }
 
 .showcase__title {
-  width: 290px;
+  width: 300px;
   height: 100px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   padding-top: 70px;
   margin-left: 15px;
@@ -465,7 +467,6 @@ main {
 @media (min-width: 411px) {
   .showcase__title {
     margin-left: 30px;
-    font-size: 26px;
   }
 }
 
@@ -988,6 +989,132 @@ main {
 }
 
 .projects__workContainer {
-  margin-top: 30px;
+  margin: 30px 0px;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
+  padding: 5px;
+  height: 230px;
+  margin: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 568px) {
+  .projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
+    height: 180px;
+  }
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__name, .projects__workContainer .workSingleProject .workSingleProject__name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .projects__workContainer .workContainer__element .workSingleProject__name, .projects__workContainer .workSingleProject .workSingleProject__name {
+    font-size: 20px;
+  }
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__describe, .projects__workContainer .workSingleProject .workSingleProject__describe {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 360px) {
+  .projects__workContainer .workContainer__element .workSingleProject__describe, .projects__workContainer .workSingleProject .workSingleProject__describe {
+    margin: 20px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__workContainer .workContainer__element .workSingleProject__describe, .projects__workContainer .workSingleProject .workSingleProject__describe {
+    font-size: 16px;
+  }
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__techList, .projects__workContainer .workSingleProject .workSingleProject__techList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 95%;
+}
+
+@media (min-width: 568px) {
+  .projects__workContainer .workContainer__element .workSingleProject__techList, .projects__workContainer .workSingleProject .workSingleProject__techList {
+    height: 60px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__workContainer .workContainer__element .workSingleProject__techList, .projects__workContainer .workSingleProject .workSingleProject__techList {
+    height: 30px;
+    margin-top: 20px;
+  }
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__techList .workSingleProject__techItem, .projects__workContainer .workSingleProject .workSingleProject__techList .workSingleProject__techItem {
+  width: 50%;
+  margin: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (min-width: 568px) {
+  .projects__workContainer .workContainer__element .workSingleProject__techList .workSingleProject__techItem, .projects__workContainer .workSingleProject .workSingleProject__techList .workSingleProject__techItem {
+    width: auto;
+    min-width: 60px;
+  }
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__linkList, .projects__workContainer .workSingleProject .workSingleProject__linkList {
+  width: 100px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__linkList .workSingleProject__linkItem, .projects__workContainer .workSingleProject .workSingleProject__linkList .workSingleProject__linkItem {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.projects__workContainer .workContainer__element .workSingleProject__linkList .workSingleProject__linkItem .workSingleProject__linkIcon, .projects__workContainer .workSingleProject .workSingleProject__linkList .workSingleProject__linkItem .workSingleProject__linkIcon {
+  color: black;
+  font-size: 30px;
 }
 /*# sourceMappingURL=main.css.map */

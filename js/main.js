@@ -63,6 +63,24 @@ window.addEventListener("DOMContentLoaded", event => {
   const projects = [
     {
       id: 0,
+      name: "Portfolio",
+      describe:
+        "Personal portfolio",
+      urlGithub:
+        "https://github.com/PathFiinder/Portfolio",
+      urlLive: "https://pathfiinder.github.io/Portfolio/",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript"
+      ],
+      category: ["web", "all"]
+    },
+    {
+      id: 1,
       name: "League of Legends stats checker",
       describe:
         "App let user to receive information about the user's game history based on the username.",
@@ -81,7 +99,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 1,
+      id: 2,
       name: "Interactive Map",
       describe:
         "App 'Interactive map' is created using jVectorMap - http://jvectormap.com/. App let the user to choose countries from all over the world which they have visited.",
@@ -100,7 +118,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 2,
+      id: 3,
       name: "Ticket Machine",
       describe:
         "App is an implementation of ticket machine used in public transport in Cracow. It let user to choose ticekts, add money and get the change.",
@@ -118,7 +136,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 3,
+      id: 4,
       name: "To do List - React",
       describe: "App is an implementation of To-do-List",
       urlGithub: "https://github.com/PathFiinder/To-Do-List-React",
@@ -127,7 +145,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 4,
+      id: 5,
       name: "MoGo",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -145,7 +163,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 5,
+      id: 6,
       name: "Ceatr",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -155,7 +173,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 6,
+      id: 7,
       name: "Smiley",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -165,7 +183,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 7,
+      id: 8,
       name: "Agency",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -175,7 +193,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 8,
+      id: 9,
       name: "Cahee",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -185,7 +203,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 9,
+      id: 10,
       name: "Memory Game",
       describe: "In game 'Memory Game' user have to find two same cards",
       urlGithub: "https://github.com/PathFiinder/Memory-Game",
@@ -194,7 +212,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 10,
+      id: 11,
       name: "Paper-Rock-Scissors",
       describe:
         "Game 'Paper-Rock-Scissors' let user to choose one of three  option and play with computer",

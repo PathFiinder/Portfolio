@@ -20,15 +20,15 @@
     <div class="wrapper">
       <header class="header">
         <h1 class="header__logo">
-          <img
+          <a class="header__link" href="#"><img
             src="images/Logo.png"
             alt="Main logo of website"
             class="header__logoImg"
-          />
+          /></a>
         </h1>
-        <button class="header__buttonIcon"
-          ><i class="fas fa-bars header__buttonIcon--bars"></i
-        ></button>
+        <button class="header__buttonIcon">
+          <span class="fas fa-bars header__buttonIcon--bars"></span>
+        </button>
         <nav class="header__nav nav nav--none">
           <ul class="nav__list">
             <li class="nav__item">
@@ -176,10 +176,49 @@
           <hr class="projects__hr" />
           <div class="projects__workContainer workContainer"></div>
         </section>
-        <section class="main__contact contact"></section>
+        <section class="main__contact contact">
+          <h2 class="contact__title">Contact.</h2>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a
+                class="contact__link"
+                aria-label="krystian_konecki@yahoo.pl"
+                rel="noreferrer"
+                href="mailto:krystian_konecki@yahoo.pl"
+                ><span class="contact__icon fas fa-envelope-open"></span
+              ></a>
+              <p class="contact__text">krystian_konecki@yahoo.pl</p>
+            </li>
+            <li class="contact__item">
+              <a
+                class="contact__link"
+                aria-label="linkedin"
+                rel="noreferrer"
+                href="https://linkedin.com/in/krystian-konecki-886721163"
+                target="blank"
+                ><span class="contact__icon fab fa-linkedin"></span
+              ></a>
+              <p class="contact__text">LinkedIn</p>
+            </li>
+            <li class="contact__item">
+              <a
+                class="contact__link"
+                aria-label="curriculum vitae"
+                rel="noreferrer"
+                href="#"
+                target="_blank"
+                ><span class="contact__icon fas fa-id-card-alt cv"></span
+              ></a>
+              <p class="contact__text">Curriculum vitae</p>
+            </li>
+          </ul>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <p class="footer__content"><span>&#169;</span>2019. All Rights Reserved. Created by <span class="footer__content--bold">Krystian Konecki</span</p>
+      </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

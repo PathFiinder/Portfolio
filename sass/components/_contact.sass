@@ -1,2 +1,57 @@
 .contact
-    
+    margin-top: 50px
+    padding-left: 15px
+    position: relative
+    @include mediaQ(411px)
+        padding-left: 30px
+    @include mediaQ(568px)
+        padding-left: 45px
+    @include mediaQ(768px)
+        padding-left: 60px
+    @include mediaQ(1024px)
+        padding-left: 80px
+    @include mediaQ(1280px)
+        padding-left: 100px
+        height: calc(100vh - 130px - 70px)
+    &__title
+        font-size: $mainSectionsTitleFS
+        font-weight: bold
+        letter-spacing: 2px
+        position: relative
+        margin-bottom: 30px
+        @include mediaQ(1024px)
+            font-size: 100px
+        &::before
+            content: ""
+            position: absolute
+            bottom: -5px
+            left: 0
+            height: 2px
+            width: 100px
+            background-color: black
+    &__list
+        width: 98%
+        height: 300px
+        display: flex
+        flex-direction: column
+        .contact__item
+            flex-basis: 33.33%
+            display: flex
+            flex-direction: row
+            .contact__link
+                font-size: 60px
+                height: 80px
+                width: 80px
+                overflow: hidden
+                text-align: center
+                line-height: 80px
+                color: black
+            .contact__text
+                flex-grow: 1
+                font-size: 16px
+                line-height: 80px
+                @include mediaQ(1024px)
+                    font-size: 20px
+                    padding-left: 10px
+
+            

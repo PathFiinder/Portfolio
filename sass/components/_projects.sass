@@ -19,7 +19,7 @@
         position: relative
         margin-bottom: 30px
         @include mediaQ(1024px)
-            font-size: 70px
+            font-size: 100px
         &::before
             content: ""
             position: absolute
@@ -68,6 +68,17 @@
                 font-weight: bold
                 @include mediaQ(768px)
                     font-size: 20px
+            .workSingleProject__counter
+                position: absolute
+                top: 6px
+                right: 5px
+                color: grey
+                font-size: 16px
+                letter-spacing: 1px
+                @include mediaQ(1024px)
+                    right: 10px
+                    font-size: 18px
+                    letter-spacing: 2px
             .workSingleProject__describe
                 font-size: 14px
                 margin-bottom: 10px

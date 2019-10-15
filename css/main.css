@@ -679,7 +679,7 @@ main {
 
 @media (min-width: 1024px) {
   .aboutMe__title {
-    font-size: 70px;
+    font-size: 100px;
   }
 }
 
@@ -933,7 +933,7 @@ main {
 
 @media (min-width: 1024px) {
   .projects__title {
-    font-size: 70px;
+    font-size: 100px;
   }
 }
 
@@ -1032,6 +1032,23 @@ main {
   }
 }
 
+.projects__workContainer .workContainer__element .workSingleProject__counter, .projects__workContainer .workSingleProject .workSingleProject__counter {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  color: grey;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1024px) {
+  .projects__workContainer .workContainer__element .workSingleProject__counter, .projects__workContainer .workSingleProject .workSingleProject__counter {
+    right: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+}
+
 .projects__workContainer .workContainer__element .workSingleProject__describe, .projects__workContainer .workSingleProject .workSingleProject__describe {
   font-size: 14px;
   margin-bottom: 10px;
@@ -1116,5 +1133,136 @@ main {
 .projects__workContainer .workContainer__element .workSingleProject__linkList .workSingleProject__linkItem .workSingleProject__linkIcon, .projects__workContainer .workSingleProject .workSingleProject__linkList .workSingleProject__linkItem .workSingleProject__linkIcon {
   color: black;
   font-size: 30px;
+}
+
+.contact {
+  margin-top: 50px;
+  padding-left: 15px;
+  position: relative;
+}
+
+@media (min-width: 411px) {
+  .contact {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 568px) {
+  .contact {
+    padding-left: 45px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    padding-left: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contact {
+    padding-left: 100px;
+    height: calc(100vh - 130px - 70px);
+  }
+}
+
+.contact__title {
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1024px) {
+  .contact__title {
+    font-size: 100px;
+  }
+}
+
+.contact__title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100px;
+  background-color: black;
+}
+
+.contact__list {
+  width: 98%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__list .contact__item {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact__list .contact__item .contact__link {
+  font-size: 60px;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 80px;
+  color: black;
+}
+
+.contact__list .contact__item .contact__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 16px;
+  line-height: 80px;
+}
+
+@media (min-width: 1024px) {
+  .contact__list .contact__item .contact__text {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+}
+
+.footer {
+  margin-top: 20px;
+  height: 50px;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.footer__content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.footer span {
+  content: "\00A9";
 }
 /*# sourceMappingURL=main.css.map */

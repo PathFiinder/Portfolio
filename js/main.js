@@ -216,6 +216,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
   const createElement = (
     name,
+    counter,
     describe,
     techUsed,
     urlGit,
@@ -223,6 +224,9 @@ window.addEventListener("DOMContentLoaded", event => {
   ) => {
     const element = `
       <h3 class="workSingleProject__name">${name}</h3>
+      <p class="workSingleProject__counter">${
+        counter < 10 ? "0" + counter : counter
+      }</p>
       <hr class="workSingleProject__hr"/>
       <p class="workSingleProject__describe">${describe}</p>
       <ul class="workSingleProject__techList">
@@ -240,6 +244,7 @@ window.addEventListener("DOMContentLoaded", event => {
   const projectsContainer = document.querySelector(".projects__workContainer");
 
   const filterProjects = () => {
+    let counterOfProjects = 1;
     projects.filter(singleProject => {
       if (
         singleProject.category[1] === typeOfSort ||
@@ -250,12 +255,14 @@ window.addEventListener("DOMContentLoaded", event => {
         div.dataset.id = singleProject.id;
         div.innerHTML += createElement(
           singleProject.name,
+          counterOfProjects,
           singleProject.describe,
           singleProject.techUsed,
           singleProject.urlGithub,
           singleProject.urlLive
         );
         projectsContainer.appendChild(div);
+        counterOfProjects++;
       }
     });
   };
@@ -284,4 +291,47 @@ window.addEventListener("DOMContentLoaded", event => {
       filterProjects();
     });
   });
+
+  //Scoll
+
+  function toScroll(PosTop, navH) {
+    $("body, html").animate(
+      {
+        scrollTop: PosTop - navH
+      },
+      1000
+    );
+    header.classList.remove("header--active");
+    nav.classList.remove("nav--active");
+  }
+
+  let headerHeight = $(".header").height();
+  let showcasePosTop = $(".showcase").offset().top;
+  let aboutMePosTop = $(".aboutMe").offset().top;
+  let projectsPosTop = $(".projects").offset().top;
+  let contactPosTop = $(".contact").offset().top;
+
+  $(".nav__link--top").on("click", function() {
+    toScroll(showcasePosTop, headerHeight);
+  });
+
+  $(".nav__link--aboutMe").on("click", function() {
+    toScroll(aboutMePosTop, headerHeight);
+  });
+
+  $(".nav__link--projects").on("click", function() {
+    toScroll(projectsPosTop, headerHeight);
+  });
+
+  $(".nav__link--contact").on("click", function() {
+    toScroll(contactPosTop, headerHeight);
+  });
+
+  window.onresize = () => {
+    headerHeight = $(".header").height();
+    showcasePosTop = $(".showcase").offset().top;
+    aboutMePosTop = $(".aboutMe").offset().top;
+    projectsPosTop = $(".projects").offset().top;
+    contactPosTop = $(".contact").offset().top;
+  };
 });

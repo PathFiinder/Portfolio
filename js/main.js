@@ -251,8 +251,8 @@ window.addEventListener("DOMContentLoaded", event => {
           ${createSingleTech(techUsed)}
       </ul>
       <div class="workSingleProject__linkList">
-        <a class="workSingleProject__linkItem" href="${urlGit}"><span class="fab fa-github-square workSingleProject__linkIcon"></span></a>
-        <a class="workSingleProject__linkItem" href="${urlLive}"><span class="fas fa-eye workSingleProject__linkIcon"></span></a>
+        <a class="workSingleProject__linkItem" target="_blank" href="${urlGit}"><span class="fab fa-github-square workSingleProject__linkIcon"></span></a>
+        <a class="workSingleProject__linkItem" target="_blank" href="${urlLive}"><span class="fas fa-eye workSingleProject__linkIcon"></span></a>
       </div>
       `;
 

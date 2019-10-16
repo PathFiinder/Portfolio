@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", event => {
   //Technologies
 
   const technologiesName = [
-    { name: "HTML5", level: "Intermediate" },
+    { name: "HTML5", level: "Advanced" },
     { name: "CSS3", level: "Advanced" },
     { name: "JavaScript", level: "Intermediate" },
     { name: "React", level: "Beginner" },

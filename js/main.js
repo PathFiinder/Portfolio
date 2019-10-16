@@ -63,27 +63,9 @@ window.addEventListener("DOMContentLoaded", event => {
   const projects = [
     {
       id: 0,
-      name: "Portfolio",
-      describe:
-        "Personal portfolio",
-      urlGithub:
-        "https://github.com/PathFiinder/Portfolio",
-      urlLive: "https://pathfiinder.github.io/Portfolio/",
-      techUsed: [
-        "HTML5",
-        "BEM",
-        "CSS3",
-        "SASS",
-        "RWD",
-        "JavaScript"
-      ],
-      category: ["web", "all"]
-    },
-    {
-      id: 1,
       name: "League of Legends stats checker",
       describe:
-        "App let user to receive information about the user's game history based on the username.",
+        "The application lets the user receive information about the player's game history based on the username.",
       urlGithub:
         "https://github.com/PathFiinder/League-of-Legends-StatsChecker",
       urlLive: "https://pathfiinder.github.io/League-of-Legends-StatsChecker",
@@ -99,10 +81,19 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
+      id: 1,
+      name: "Portfolio",
+      describe: "Personal portfolio.",
+      urlGithub: "https://github.com/PathFiinder/Portfolio",
+      urlLive: "https://pathfiinder.github.io/Portfolio/",
+      techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "JavaScript", "jQuery"],
+      category: ["web", "all"]
+    },
+    {
       id: 2,
       name: "Interactive Map",
       describe:
-        "App 'Interactive map' is created using jVectorMap - http://jvectormap.com/. App let the user to choose countries from all over the world which they have visited.",
+        "The application allows the user select countries from around the world that he has visited. App 'Interactive map' is created using jVectorMap - http://jvectormap.com/. ",
       urlGithub: "https://github.com/PathFiinder/Interactive-Map",
       urlLive: "https://pathfiinder.github.io/Interactive-Map",
       techUsed: [
@@ -121,7 +112,7 @@ window.addEventListener("DOMContentLoaded", event => {
       id: 3,
       name: "Ticket Machine",
       describe:
-        "App is an implementation of ticket machine used in public transport in Cracow. It let user to choose ticekts, add money and get the change.",
+        "The application is an implementation of ticket machine used in public transport in Cracow. App lets user choose ticekts, add money and get the change.",
       urlGithub: "https://github.com/PathFiinder/Ticket-Machine-Javascript",
       urlLive: "https://pathfiinder.github.io/Ticket-Machine-Javascript",
       techUsed: [
@@ -138,7 +129,7 @@ window.addEventListener("DOMContentLoaded", event => {
     {
       id: 4,
       name: "To do List - React",
-      describe: "App is an implementation of To-do-List",
+      describe: "The application is an implementation of To-do-List",
       urlGithub: "https://github.com/PathFiinder/To-Do-List-React",
       urlLive: "https://pathfiinder.github.io/To-Do-List-React/",
       techUsed: ["HTML5", "BEM", "CSS3", "SASS", "RWD", "React"],
@@ -215,7 +206,7 @@ window.addEventListener("DOMContentLoaded", event => {
       id: 11,
       name: "Paper-Rock-Scissors",
       describe:
-        "Game 'Paper-Rock-Scissors' let user to choose one of three  option and play with computer",
+        "Game 'Paper-Rock-Scissors' lets user choose one of three option and play with computer",
       urlGithub: "https://github.com/PathFiinder/Game-Paper-Rock-Scissors",
       urlLive: "https://pathfiinder.github.io/Game-Paper-Rock-Scissors",
       techUsed: ["HTML5", "CSS3", "SASS", "RWD", "JavaScript"],

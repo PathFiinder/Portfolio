@@ -18,12 +18,12 @@ window.addEventListener("DOMContentLoaded", event => {
   const technologiesName = [
     { name: "HTML5", level: "Advanced" },
     { name: "CSS3", level: "Advanced" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "React", level: "Beginner" },
-    { name: "jQuery", level: "Intermediate" },
+    { name: "JavaScript", level: "Advanced" },
+    { name: "React", level: "Intermediate" },
+    { name: "jQuery", level: "Beginner" },
     { name: "RWD", level: "Intermediate" },
     { name: "SASS", level: "Intermediate" },
-    { name: "Bootstrap", level: "Intermediate" },
+    { name: "Bootstrap", level: "Beginnner" },
     { name: "Node", level: "Beginner" },
     { name: "Webpack", level: "Beginner" },
     { name: "Git", level: "Intermediate" }
@@ -63,6 +63,45 @@ window.addEventListener("DOMContentLoaded", event => {
   const projects = [
     {
       id: 0,
+      name: "League of Legends stats checker using React",
+      describe:
+        "App created using React. The application lets the user receive information about the player's game history based on the username. App is using Riot API.",
+      urlGithub:
+        "https://github.com/PathFiinder/League-Of-Legends-Stats-REACT",
+      urlLive: "https://pathfiinder.github.io/League-Of-Legends-Stats-REACT",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+        "React",
+        "RioT API"
+      ],
+      category: ["app", "all"]
+    },
+    {
+      id: 1,
+      name: "The Movie",
+      describe:
+        "App created using React (React Router). App let user receive information about the most popular, newest movies in database. Also user can search for selected movie or series and add favourites movies to 'My List' stored in Local Storage",
+      urlGithub:
+        "https://github.com/PathFiinder/TheMovie",
+      urlLive: "https://pathfiinder.github.io/TheMovie/",
+      techUsed: [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+        "React",
+        "React Router"
+      ],
+      category: ["app", "all"]
+    },
+    {
+      id: 2,
       name: "League of Legends stats checker",
       describe:
         "The application lets the user receive information about the player's game history based on the username.",
@@ -81,7 +120,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 1,
+      id: 3,
       name: "Portfolio",
       describe: "Personal portfolio.",
       urlGithub: "https://github.com/PathFiinder/Portfolio",
@@ -90,7 +129,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 2,
+      id: 4,
       name: "Interactive Map",
       describe:
         "The application allows the user select countries from around the world that he has visited. App 'Interactive map' is created using jVectorMap - http://jvectormap.com/. ",
@@ -109,7 +148,26 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 3,
+      id: 5,
+      name: "Weather APP ",
+      describe:
+        "The application allows the user to receive information about the current weather and for the next 5 days in the selected location or through the enabled location module. Application made as part of the CodersCamp course. ",
+      urlGithub: "https://github.com/PathFiinder/Weather-App-JS",
+      urlLive: "https://pathfiinder.github.io/Weather-App-JS/",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+        "OpenWeather Api",
+        "OpenCage Geocorder" 
+      ],
+      category: ["app", "all"]
+    },
+    {
+      id: 6,
       name: "Ticket Machine",
       describe:
         "The application is an implementation of ticket machine used in public transport in Cracow. App lets user choose ticekts, add money and get the change.",
@@ -127,7 +185,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 4,
+      id: 7,
       name: "To do List - React",
       describe: "The application is an implementation of To-do-List",
       urlGithub: "https://github.com/PathFiinder/To-Do-List-React",
@@ -136,7 +194,24 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 5,
+      id: 8,
+      name: "Dev",
+      describe:
+        "Project implemented as part of the course 'Coders Camp' (PSD TO HTML)",
+      urlGithub: "https://github.com/PathFiinder/CodersCamp-Project-1",
+      urlLive: "https://pathfiinder.github.io/CodersCamp-Project-1/",
+      techUsed: [
+        "HTML5",
+        "BEM",
+        "CSS3",
+        "SASS",
+        "RWD",
+        "JavaScript",
+      ],
+      category: ["web", "all"]
+    },
+    {
+      id: 9,
       name: "MoGo",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -154,7 +229,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 6,
+      id: 10,
       name: "Ceatr",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -164,7 +239,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 7,
+      id: 11,
       name: "Smiley",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -174,7 +249,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 8,
+      id: 12,
       name: "Agency",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -184,7 +259,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 9,
+      id: 13,
       name: "Cahee",
       describe:
         "A project carried out to create a website using free template (PSD to HTML)",
@@ -194,7 +269,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["web", "all"]
     },
     {
-      id: 10,
+      id: 14,
       name: "Memory Game",
       describe: "In game 'Memory Game' user have to find two same cards",
       urlGithub: "https://github.com/PathFiinder/Memory-Game",
@@ -203,7 +278,7 @@ window.addEventListener("DOMContentLoaded", event => {
       category: ["app", "all"]
     },
     {
-      id: 11,
+      id: 15,
       name: "Paper-Rock-Scissors",
       describe:
         "Game 'Paper-Rock-Scissors' lets user choose one of three option and play with computer",

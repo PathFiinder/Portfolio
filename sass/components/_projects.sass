@@ -54,11 +54,7 @@
         flex-direction: column
         .workContainer__element,.workSingleProject
             padding: 5px
-            height: 230px
-            @include mediaQ(568px)
-                height: 200px
-            @include mediaQ(768px)
-                height: 180px
+            height: auto
             margin: 5px
             border: 1px solid black
             overflow: hidden
@@ -100,9 +96,13 @@
                     margin-top: 20px
                 .workSingleProject__techItem
                     width: 50%
-                    @include mediaQ(568px)
-                        width: auto
+                    @media (min-width: 568px)
+                        width: calc(100% / 6)
                         min-width: 60px
+                    @media (min-width: 768px)
+                        width: calc(100% / 7)
+                    @media (min-width: 1024px)
+                        width: calc(100% / 10)
                     margin: 2px
                     font-size: 14px
                     font-weight: bold
@@ -111,6 +111,8 @@
                 height: 30px
                 display: flex
                 flex-direction: row
+                margin-top: 10px
+                margin-bottom: 10px
                 .workSingleProject__linkItem
                     flex-basis: 50%
                     text-align: center

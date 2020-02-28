@@ -860,7 +860,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 140px;
+  max-width: 150px;
+}
+
+@media (min-width: 568px) {
+  .aboutMe__techContainer .aboutMe__list, .aboutMe__techContainer .mainList {
+    max-width: 250px;
+  }
 }
 
 .aboutMe__techContainer .aboutMe__list .aboutMe__listItem, .aboutMe__techContainer .aboutMe__list .mainList__item, .aboutMe__techContainer .mainList .aboutMe__listItem, .aboutMe__techContainer .mainList .mainList__item {
@@ -1121,23 +1127,11 @@ main {
 
 .projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
   padding: 5px;
-  height: 230px;
+  height: auto;
   margin: 5px;
   border: 1px solid black;
   overflow: hidden;
   position: relative;
-}
-
-@media (min-width: 568px) {
-  .projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
-    height: 200px;
-  }
-}
-
-@media (min-width: 768px) {
-  .projects__workContainer .workContainer__element, .projects__workContainer .workSingleProject {
-    height: 180px;
-  }
 }
 
 .projects__workContainer .workContainer__element .workSingleProject__name, .projects__workContainer .workSingleProject .workSingleProject__name {
@@ -1225,8 +1219,20 @@ main {
 
 @media (min-width: 568px) {
   .projects__workContainer .workContainer__element .workSingleProject__techList .workSingleProject__techItem, .projects__workContainer .workSingleProject .workSingleProject__techList .workSingleProject__techItem {
-    width: auto;
+    width: calc(100% / 6);
     min-width: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__workContainer .workContainer__element .workSingleProject__techList .workSingleProject__techItem, .projects__workContainer .workSingleProject .workSingleProject__techList .workSingleProject__techItem {
+    width: calc(100% / 7);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects__workContainer .workContainer__element .workSingleProject__techList .workSingleProject__techItem, .projects__workContainer .workSingleProject .workSingleProject__techList .workSingleProject__techItem {
+    width: calc(100% / 10);
   }
 }
 
@@ -1240,6 +1246,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .projects__workContainer .workContainer__element .workSingleProject__linkList .workSingleProject__linkItem, .projects__workContainer .workSingleProject .workSingleProject__linkList .workSingleProject__linkItem {

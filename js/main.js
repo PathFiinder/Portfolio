@@ -20,13 +20,14 @@ window.addEventListener("DOMContentLoaded", event => {
     { name: "CSS3", level: "Advanced" },
     { name: "JavaScript", level: "Advanced" },
     { name: "React", level: "Intermediate" },
+    { name: "Angular", level: "Beginner"},
     { name: "jQuery", level: "Beginner" },
     { name: "RWD", level: "Intermediate" },
     { name: "SASS", level: "Intermediate" },
     { name: "Bootstrap", level: "Beginnner" },
     { name: "Node", level: "Beginner" },
     { name: "Webpack", level: "Beginner" },
-    { name: "Git", level: "Intermediate" }
+    { name: "Git", level: "Beginner" }
   ];
   const mainList = document.querySelector(".mainList");
   const skillsContainerImage = document.querySelector(
